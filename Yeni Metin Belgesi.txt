@@ -1,0 +1,31 @@
+ int sicaklik
+ int sicaklikpin=A0;
+}
+void setup()
+{
+  pinMode(13,OUTPUT);
+  pinMode(7,OUTPUT);
+  pinMode(6,OUTPUT);
+  pinMode(4,INPUT);
+  
+  Serial.begin(9600);
+}
+
+void loop()
+{
+ sicaklik=((analogRead(sicaklikpin)*4.88)-500)/10;
+  
+  if(siacaklik>35)
+  {
+    tone(buzzerPin,400);
+  }
+  else
+  {
+    noTone(buzzerPin);
+    
+    Serial.print(sicaklik);
+    Serial.printIn("c");
+  }
+}
+}
+  
